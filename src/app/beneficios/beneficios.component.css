@@ -1,0 +1,65 @@
+h5 {
+  margin-left:10px;
+  color: white;
+}
+
+i {
+    color: white;
+    font-size: 1em;
+}
+
+.contenedor {
+    padding-top: 25vh;
+}
+
+.media-body {
+    margin: 2em 2em 2em 2em;
+    padding: 1em 1em 1em 1em;
+    background-image: linear-gradient(to bottom right, #ff6060 , #982223);
+    min-height: 30vh;
+    border-radius: 18px 18px 18px 18px;
+    -moz-border-radius: 18px 18px 18px 18px;
+    -webkit-border-radius: 18px 18px 18px 18px;
+    border: 2px solid #982223;
+}
+
+.media-large {
+    margin: 2em 2em 2em 2em;
+    padding: 1em 1em 1em 1em;
+    background-image: linear-gradient(to bottom right, #ff6060 , #982223);
+    min-height: 45vh;
+    border-radius: 18px 18px 18px 18px;
+    -moz-border-radius: 18px 18px 18px 18px;
+    -webkit-border-radius: 18px 18px 18px 18px;
+    border: 2px solid #982223;
+}
+
+.media-body span  {
+    color: black;
+    font-weight: 700;
+    letter-spacing: .2em;
+
+}
+
+.media-large span  {
+    color: black;
+    font-weight: 700;
+    letter-spacing: .2em;
+
+}
+
+.media {
+    margin: 1em;
+    padding: 1em;
+}
+
+.media h5{
+ color: black;
+ font-weight: 700;
+ letter-spacing: .2em;
+}
+
+.media i{
+    color: #982223;
+
+}

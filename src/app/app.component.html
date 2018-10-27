@@ -1,20 +1,116 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!--Menu-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger logo" href="#page-top">
+      <img class="img-fluid" src="http://138.197.168.242/najhar/images/logo.png" alt="A&M Consulting | Contadores Bogota">
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" role="presentation">
+          <a [routerLink]="['/inicio']" [routerLinkActive]="['active']" class="nav-link nav-link js-scroll-trigger">INICIO</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a [routerLink]="['/servicios']" [routerLinkActive]="['active']" class="nav-link nav-link js-scroll-trigger">SERVICIOS</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a [routerLink]="['/inmobiliaria']" [routerLinkActive]="['active']" class="nav-link nav-link js-scroll-trigger">INMOBILIARIA</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a [routerLink]="['/nosotros']" [routerLinkActive]="['active']" class="nav-link nav-link js-scroll-trigger">NOSOTROS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--Fin Menu-->
 
+<!--Selector Angular-->
+<div>
+  <router-outlet (activate)="onActivate($event)"></router-outlet>
+</div>
+<!--Fin Selector Angular-->
+
+<!--Servicios-->
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-heading text-uppercase">Servicios</h2>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-4"><span class="fa-stack fa-4x"> <i class="fa fa-circle fa-stack-2x text-primary" style="color:rgb(137,47,27);"></i><i
+            class="fa fa-shopping-bag fa-stack-1x fa-inverse" style="color:rgb(255,255,255);"></i></span>
+        <h4>JURIDICOS</h4>
+        <p class="text-secondary">Nuestra compañía cuenta con profesionales competentes en todas las áreas del derecho<br><br><br></p>
+      </div>
+      <div class="col-4"><span class="fa-stack fa-4x"> <i class="fa fa-circle fa-stack-2x text-primary" style="color:rgb(137,47,27);"></i><i
+            class="fa fa-area-chart fa-stack-1x fa-inverse"></i></span>
+        <h4>CONTABLES</h4>
+        <p class="text-secondary">Najhar Abogados está estructurada como una organización proactiva que busca prever
+          las necesidades de sus clientes no sólo frente a los cambios legales y regulatorios, sino también frente a su
+          propia evolución y proyectos, priorizando
+          la calidad del servicio.<br><br><br><br></p>
+      </div>
+      <div class="col-4"><span class="fa-stack fa-4x"> <i class="fa fa-circle fa-stack-2x text-primary" style="color:rgb(137,47,27);"></i><i
+            class="fa fa-briefcase fa-stack-1x fa-inverse"></i></span>
+        <h4>COBRANZAS</h4>
+        <p class="text-secondary">Las empresas que confían su cartera a nuestra firma, cuentan&nbsp; con absoluta
+          seguridad que nuestros métodos y nuestro equipo pre – jurídico y jurídico garantizan la recuperación de la
+          cartera morosa.<br><br><br><br><br><br></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Ajuste Mapa-->
+<div id="map">
+
+</div>
+
+<!--Contactenos-->
+<app-empresa></app-empresa>
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <span class="copyright">Copyright &copy; Najhar Abogados</span><br>
+        <span>Diseño <a href="yotta.com.co">Yottabyte Innovation</a> </span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          <li class="list-inline-item">
+            <a href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a [routerLink]="['/inicio']">Politicas</a>
+          </li>
+          <li class="list-inline-item">
+            <a [routerLink]="['/inicio']">Datos Personales</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
