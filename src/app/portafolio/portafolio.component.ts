@@ -18,7 +18,7 @@ export class PortafolioComponent implements OnInit {
     private _router: Router,
     private _portfolioservice: PortfolioService
   ) {
-    this.titulo = 'PORTFOLIO';
+    this.titulo = 'INMOBILIARIA';
    }
 
   ngOnInit() {
